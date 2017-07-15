@@ -100,6 +100,11 @@ echo:
 
 setlocal
 call "C:\Program Files (x86)\Microsoft Visual C++ Build Tools\vcbuildtools.bat" amd64_x86 store
+C:\Program Files (x86)\Microsoft Visual Studio\Shared\14.0\VC\lib\store\amd64
+set LIB=%VCToolsInstallDir%\lib\x86\store;%VCINSTALLDIR%lib\store;%VCToolsInstallDir%VC\atlmfc\lib;%UniversalCRTSdkDir%lib\%UCRTVersion%\ucrt\x86;;%UniversalCRTSdkDir%lib\%UCRTVersion%\um\x86;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\lib\um\x86;;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\Lib\um\x86
+set LIBPATH=%VCToolsInstallDir%\atlmfc\lib;%VCToolsInstallDir%\lib\x86\;%LIBPATH%
+set INCLUDE=%VCToolsInstallDir%\include;%VCToolsInstallDir%\atlmfc\include;%UniversalCRTSdkDir%Include\%UCRTVersion%\ucrt;%UniversalCRTSdkDir%Include\%UCRTVersion%\um;%UniversalCRTSdkDir%Include\%UCRTVersion%\shared;%UniversalCRTSdkDir%Include\%UCRTVersion%\winrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\Include\um;%INCLUDE%
+
 
 %MSYS2_BIN% --login -x %~dp0FFmpegConfig.sh Win10 x86
 endlocal
@@ -111,6 +116,10 @@ echo:
 
 setlocal
 call "C:\Program Files (x86)\Microsoft Visual C++ Build Tools\vcbuildtools.bat" amd64 store
+set LIB=%VCToolsInstallDir%\lib\x64\store;%VCINSTALLDIR%lib\store\amd64;%VCToolsInstallDir%VC\atlmfc\lib\amd64;%UniversalCRTSdkDir%lib\%UCRTVersion%\ucrt\x64;;%UniversalCRTSdkDir%lib\%UCRTVersion%\um\x64;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\lib\um\x64;;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\Lib\um\x64
+set LIBPATH=%VCToolsInstallDir%\atlmfc\lib\amd64;%VCToolsInstallDir%\lib\x64\;%LIBPATH%
+set INCLUDE=%VCToolsInstallDir%\include;%VCToolsInstallDir%\atlmfc\include;%UniversalCRTSdkDir%Include\%UCRTVersion%\ucrt;%UniversalCRTSdkDir%Include\%UCRTVersion%\um;%UniversalCRTSdkDir%Include\%UCRTVersion%\shared;%UniversalCRTSdkDir%Include\%UCRTVersion%\winrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\Include\um;%INCLUDE%
+
 
 %MSYS2_BIN% --login -x %~dp0FFmpegConfig.sh Win10 x64
 endlocal
@@ -122,6 +131,10 @@ echo:
 
 setlocal
 call "C:\Program Files (x86)\Microsoft Visual C++ Build Tools\vcbuildtools.bat" amd64_arm store
+set LIB=%VCToolsInstallDir%\lib\arm\store;%VCINSTALLDIR%lib\store\ARM;%VCToolsInstallDir%VC\atlmfc\lib\ARM;%UniversalCRTSdkDir%lib\%UCRTVersion%\ucrt\arm;;%UniversalCRTSdkDir%lib\%UCRTVersion%\um\arm;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\lib\um\arm;;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\Lib\um\arm
+set LIBPATH=%VCToolsInstallDir%\atlmfc\lib\ARM;%VCToolsInstallDir%\lib\arm\;%LIBPATH%
+set INCLUDE=%VCToolsInstallDir%\include;%VCToolsInstallDir%\atlmfc\include;%UniversalCRTSdkDir%Include\%UCRTVersion%\ucrt;%UniversalCRTSdkDir%Include\%UCRTVersion%\um;%UniversalCRTSdkDir%Include\%UCRTVersion%\shared;%UniversalCRTSdkDir%Include\%UCRTVersion%\winrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\Include\um;%INCLUDE%
+
 
 %MSYS2_BIN% --login -x %~dp0FFmpegConfig.sh Win10 ARM
 endlocal
